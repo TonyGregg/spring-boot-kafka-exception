@@ -1,0 +1,17 @@
+kafka:
+  cluster:
+    bootstrapServer: 192.168.86.37:9092
+    simpleTopic: local.genil.demo.mouseposition.0
+    jsonTopic: local.genil.demo.custommessage.0
+  consumer:
+    groupIdPrefix: group-
+    maxFailure: 3
+logging:
+  level:
+    root: INFO
+    org:
+      apache:
+        kafka:
+          clients:
+            producer:
+              ProducerConfig: WARN
